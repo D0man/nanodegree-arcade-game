@@ -28,7 +28,6 @@ Enemy.prototype.update = function(dt) {
         if(player.score >= 5 && allEnemies.length < 10){
         this.speed+= 10*randomizer(5,1);
         allEnemies.push(new Enemy());
-        console.log(allEnemies);
         }
         if(player.score >= 10 && this.speed<1000){
             this.speed+= 100*randomizer(2,0.5);
@@ -78,7 +77,6 @@ Player.prototype.handleInput= function(e){
         switch(e){
             case 'up':
                 if ( this.y>0 ) this.y-=80;
-                console.log(this.x)
                 break;
             case 'down':
                 if ( this.y<380 ) this.y+=80;
