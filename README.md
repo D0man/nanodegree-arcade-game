@@ -7,7 +7,7 @@ For detailed instructions on how to get started, check out this [guide](https://
 
 # Game instruction
 
-Your task is to help the poor little creature get into the water. I am looking for pestes carefully wishing to end his life. Use the arrows to control the character, run between opponents' legs and score as many points as possible. Sometimes, the cut-offs may appear slower sometimes, faster, but they will definitely appear. Be fast, if you lose, you can jam again by pressing space.
+Your task is to help the poor little creature get into the water. Be careful looking for pestes wishing to end his life. Use the arrows to control the character, run between opponents legs and score as many points as possible. Sometimes eniemies may appear slower sometimes faster, but they will definitely appear. Be fast, if you lose, you can start again by pressing space.
 
 ### How to start
 Just clone,download repo and run index.html file. Yo can also try online demo https://d0man.github.io/nanodegree-arcade-game/
