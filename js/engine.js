@@ -103,6 +103,7 @@ var Engine = (function(global) {
      * they are just drawing the entire screen over and over.
      */
     function render() {
+    
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
@@ -120,7 +121,8 @@ var Engine = (function(global) {
         
         // Before drawing, clear existing canvas
         ctx.clearRect(0,0,canvas.width,canvas.height)
-
+        ctx.fillText(`Score:${player.score}`, 400, 40);
+        ctx.font="18px serif";
         /* Loop through the number of rows and columns we've defined above
          * and, using the rowImages array, draw the correct image for that
          * portion of the "grid"
@@ -149,11 +151,12 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
+        player.render();
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
 
-        player.render();
+       
     }
 
     /* This function does nothing but it could have been a good place to
@@ -172,8 +175,10 @@ var Engine = (function(global) {
         'images/stone-block.png',
         'images/water-block.png',
         'images/grass-block.png',
+        'images/char-boy.png',
+        'images/char-cat-girl.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/death-bug.png'
     ]);
     Resources.onReady(init);
 
@@ -183,3 +188,6 @@ var Engine = (function(global) {
      */
     global.ctx = ctx;
 })(this);
+
+
+  
