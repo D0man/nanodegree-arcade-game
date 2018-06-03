@@ -53,6 +53,7 @@ var Player = function(){
     this.score = 0;
     
 }
+//sending player back to green zone and gains score
 Player.prototype.update = function() {
    
     if (this.y===-20){
@@ -61,6 +62,7 @@ Player.prototype.update = function() {
     }
     
 }
+//render image if player is death it show you score and gives option to restart
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
     ctx.fillStyle ='black';
@@ -114,7 +116,7 @@ document.addEventListener('keydown', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
-//randoomizer function that get random nuber between max and min
+//this gives random number between max and min
 function randomizer(max,min){
     return Math.round(Math.random()*max-min)+min;
 }
