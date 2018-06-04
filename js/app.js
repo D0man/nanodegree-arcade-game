@@ -8,7 +8,7 @@ var Enemy = function({x=-100,speed=1} = {}) {
     // a helper we've provided to easily load images
     this.sprite = 'images/char-cat-girl.png';
     this.x= x;
-    this.y= [220,140,60][randomizer(3,0)];
+    this.y= [220,140,60][randomizer(2,0)];
     this.speed = speed*randomizer(100,50);
 };
 
@@ -92,7 +92,7 @@ Player.prototype.handleInput= function(e){
         }
     }else if (e === 'space'){
      player = new Player();
-     allEnemies =[new Enemy({speed:4})];
+     allEnemies =[new Enemy()];
     }
 }
 // Now instantiate your objects.
@@ -120,3 +120,4 @@ document.addEventListener('keydown', function(e) {
 function randomizer(max,min){
     return Math.round(Math.random()*max-min)+min;
 }
+console.log(allEnemies);
