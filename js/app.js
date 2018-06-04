@@ -1,4 +1,3 @@
-
 // Enemies our player must avoid
 var Enemy = function({x=-100,speed=1} = {}) {
     // Variables applied to each of our instances go here,
