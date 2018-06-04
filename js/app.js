@@ -119,4 +119,3 @@ document.addEventListener('keydown', function(e) {
 function randomizer(max,min){
     return Math.round(Math.random()*max-min)+min;
 }
-console.log(allEnemies);
